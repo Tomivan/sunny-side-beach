@@ -1,0 +1,75 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.label {
+  font-family: var(--font-display, inherit);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+.detail {
+  font-size: 0.875rem;
+  color: var(--color-driftwood, #81765b);
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px solid color-mix(in srgb, var(--color-ocean, #1d3b4a) 25%, transparent);
+  color: var(--color-ocean, #1d3b4a);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.button:hover {
+  border-color: var(--color-ocean, #1d3b4a);
+  background-color: var(--color-ocean, #1d3b4a);
+  color: var(--color-cream, #faf6ee);
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.output {
+  width: 1.75rem;
+  text-align: center;
+  font-family: var(--font-display, inherit);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-charcoal, #2b2b2b);
+}

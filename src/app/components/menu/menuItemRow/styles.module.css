@@ -1,0 +1,94 @@
+.row {
+  padding-block: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.name {
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nameLight {
+  color: var(--color-ocean, #1d3b4a);
+}
+
+.nameDark {
+  color: var(--color-cream, #faf6ee);
+}
+
+.leader {
+  margin-bottom: 0.25rem;
+  flex: 1;
+  border-bottom: 2px dotted;
+}
+
+.leaderLight {
+  border-bottom-color: color-mix(in srgb, var(--color-driftwood, #81765b) 35%, transparent);
+}
+
+.leaderDark {
+  border-bottom-color: color-mix(in srgb, var(--color-cream, #faf6ee) 25%, transparent);
+}
+
+.price {
+  font-family: var(--font-display, inherit);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.priceLight {
+  color: var(--color-gold-deep, #a17c2e);
+}
+
+.priceDark {
+  color: var(--color-gold, #c8a24a);
+}
+
+.description {
+  margin-top: 0.25rem;
+  max-width: 28rem;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.descriptionLight {
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 75%, transparent);
+}
+
+.descriptionDark {
+  color: color-mix(in srgb, var(--color-cream, #faf6ee) 75%, transparent);
+}
+
+.tags {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.tagLight {
+  background-color: var(--color-seafoam-soft, #d9ece4);
+  color: var(--color-ocean, #1d3b4a);
+}
+
+.tagDark {
+  background-color: color-mix(in srgb, var(--color-cream, #faf6ee) 10%, transparent);
+  color: var(--color-cream, #faf6ee);
+}

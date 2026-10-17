@@ -1,0 +1,142 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.legend {
+  font-family: var(--font-display, inherit);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  padding: 0;
+}
+
+.legendHint {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-driftwood, #81765b);
+}
+
+.quickDates {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quickDateButton {
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 2px solid;
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.quickDateButton:active {
+  transform: scale(0.95);
+}
+
+.quickDateButtonActive {
+  border-color: var(--color-ocean, #1d3b4a);
+  background-color: var(--color-ocean, #1d3b4a);
+  color: var(--color-cream, #faf6ee);
+}
+
+.quickDateButtonDefault {
+  border-color: color-mix(in srgb, var(--color-driftwood, #81765b) 25%, transparent);
+  color: var(--color-ocean, #1d3b4a);
+}
+
+.quickDateButtonDefault:hover {
+  border-color: var(--color-ocean, #1d3b4a);
+}
+
+.dateFieldWrap {
+  margin-top: 1rem;
+  max-width: 20rem;
+}
+
+.dateInputWrap {
+  position: relative;
+}
+
+.dateInput {
+  padding-right: 2.75rem;
+}
+
+.dateIcon {
+  pointer-events: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  transform: translateY(-50%);
+  color: var(--color-driftwood, #81765b);
+}
+
+.arrivalGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .arrivalGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrivalGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.counterList {
+  margin-top: 0.5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-driftwood, #81765b) 15%, transparent);
+}
+
+.counterList > * + * {
+  border-top: 1px solid color-mix(in srgb, var(--color-driftwood, #81765b) 15%, transparent);
+}
+
+.guestsNotice {
+  margin-top: 1rem;
+}
+
+.helperText {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-driftwood, #81765b);
+}
+
+.seatingGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .seatingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

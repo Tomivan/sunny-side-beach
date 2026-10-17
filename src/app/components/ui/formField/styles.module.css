@@ -1,0 +1,80 @@
+.label {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-charcoal, #2b2b2b);
+}
+
+.optional {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-driftwood, #81765b);
+}
+
+.hint {
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-driftwood, #81765b);
+}
+
+.error {
+  margin-top: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-coral-deep, #c2492c);
+  margin-bottom: 0;
+}
+
+.errorIcon {
+  height: 1rem;
+  width: 1rem;
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid;
+  background-color: var(--color-cream, #faf6ee);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--color-charcoal, #2b2b2b);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--color-driftwood, #81765b) 70%, transparent);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px;
+}
+
+.inputDefault {
+  border-color: color-mix(in srgb, var(--color-driftwood, #81765b) 30%, transparent);
+}
+
+.inputDefault:hover {
+  border-color: color-mix(in srgb, var(--color-driftwood, #81765b) 50%, transparent);
+}
+
+.inputDefault:focus {
+  border-color: var(--color-ocean, #1d3b4a);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-seafoam, #a8d5c8) 30%, transparent);
+}
+
+.inputError {
+  border-color: var(--color-coral-deep, #c2492c);
+}
+
+.inputError:focus {
+  border-color: var(--color-coral-deep, #c2492c);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-coral, #ef6a4b) 20%, transparent);
+}

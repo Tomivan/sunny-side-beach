@@ -1,0 +1,34 @@
+.root {
+  position: relative;
+  display: block;
+  aspect-ratio: 6 / 5;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.defaultSize {
+  width: 5rem;
+}
+
+.surfaceBadge {
+  border-radius: 1rem;
+  background-color: #efe9dc;
+  box-shadow: 0 6px 20px -8px rgba(23, 72, 90, 0.2);
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+  outline-offset: -1px;
+}
+
+.surfaceBlend {
+  mix-blend-mode: multiply;
+}
+
+.image {
+  position: absolute;
+  left: -101%;
+  top: 0;
+  height: auto;
+  width: 304%;
+  max-width: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}

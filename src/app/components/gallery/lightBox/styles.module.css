@@ -1,0 +1,139 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  background-color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 95%, transparent);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  color: var(--color-cream, #faf6ee);
+}
+
+.counter {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.counterCurrent {
+  font-weight: 600;
+}
+
+.counterTotal {
+  color: color-mix(in srgb, var(--color-cream, #faf6ee) 60%, transparent);
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .stage {
+    padding-inline: 6rem;
+  }
+}
+
+.image {
+  max-height: 74vh;
+  max-width: 100%;
+  cursor: grab;
+  user-select: none;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+
+.image:active {
+  cursor: grabbing;
+}
+
+.navButton {
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: color-mix(in srgb, var(--color-cream, #faf6ee) 10%, transparent);
+  color: var(--color-cream, #faf6ee);
+  border: none;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.navButton:hover {
+  background-color: color-mix(in srgb, var(--color-cream, #faf6ee) 20%, transparent);
+}
+
+.navButton:active {
+  transform: scale(0.95);
+}
+
+.navButtonPrev {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.navButtonNext {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navButtonPrev,
+  .navButtonNext {
+    display: flex;
+  }
+}
+
+.navButtonMobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .navButtonMobile {
+    display: none;
+  }
+}
+
+.navIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.chevronIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.caption {
+  flex: 1;
+  text-align: center;
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--color-cream, #faf6ee) 80%, transparent);
+  margin: 0;
+}

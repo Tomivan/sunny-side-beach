@@ -1,0 +1,152 @@
+.gallerySection {
+  padding: 0 1.25rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .gallerySection {
+    padding: 0 2rem 6rem;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.galleryBody {
+  margin-top: 2rem;
+}
+
+.emptyGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: var(--color-cream, #faf6ee);
+  padding-block: 5rem;
+  text-align: center;
+}
+
+.emptyEvents {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: var(--color-sand, #e8dfc8);
+  padding-block: 4rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--color-driftwood, #81765b);
+}
+
+.emptyTitle {
+  margin-top: 1rem;
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  margin-bottom: 0;
+}
+
+.emptyText {
+  margin-top: 0.25rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 75%, transparent);
+}
+
+.eventsSection {
+  scroll-margin-top: 5rem;
+  background-color: var(--color-cream, #faf6ee);
+  padding: 5rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .eventsSection {
+    padding: 7rem 2rem;
+  }
+}
+
+.eventsHeader {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .eventsHeader {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: end;
+  }
+}
+
+.eventsHeading {
+  font-family: var(--font-display, inherit);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.02;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .eventsHeading {
+    font-size: 3.75rem;
+  }
+}
+
+.eventsLede {
+  font-size: 1.125rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 80%, transparent);
+  margin: 0;
+}
+
+.filterRow {
+  margin-top: 2.5rem;
+}
+
+.eventList {
+  margin-top: 2.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.eventList > * + * {
+  border-top: 1px solid color-mix(in srgb, var(--color-driftwood, #81765b) 20%, transparent);
+}
+
+.eventItem {
+  padding-block: 2rem;
+}
+
+.eventItem:first-child {
+  padding-top: 0;
+}
+
+.footerRow {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footerHint {
+  font-size: 0.875rem;
+  color: var(--color-driftwood, #81765b);
+  margin: 0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

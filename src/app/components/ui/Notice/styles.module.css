@@ -1,0 +1,45 @@
+.notice {
+  display: flex;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.icon {
+  margin-top: 0.125rem;
+  height: 18px;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-weight: 600;
+  margin: 0;
+}
+
+.bodyWithTitle {
+  margin-top: 0.125rem;
+  opacity: 0.9;
+}
+
+.toneInfo {
+  background-color: var(--color-seafoam-soft, #d9ece4);
+  color: var(--color-ocean, #1d3b4a);
+}
+
+.toneWarning {
+  background-color: color-mix(in srgb, var(--color-gold, #c8a24a) 20%, transparent);
+  color: var(--color-charcoal, #2b2b2b);
+}
+
+.toneError {
+  background-color: color-mix(in srgb, var(--color-coral, #ef6a4b) 15%, transparent);
+  color: var(--color-coral-deep, #c2492c);
+}
+
+.toneSuccess {
+  background-color: var(--color-seafoam-soft, #d9ece4);
+  color: var(--color-ocean, #1d3b4a);
+}

@@ -1,0 +1,126 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gridTwo {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gridTwo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heading {
+  font-family: var(--font-display, inherit);
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+.subheading {
+  margin-top: 0.25rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 75%, transparent);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.agreeLabel {
+  display: flex;
+  cursor: pointer;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border: 2px solid;
+  padding: 1rem;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.agreeLabel:has(:focus-visible) {
+  outline: 2px solid var(--color-ocean, #1d3b4a);
+  outline-offset: 2px;
+}
+
+.agreeLabelError {
+  border-color: var(--color-coral-deep, #c2492c);
+  background-color: color-mix(in srgb, var(--color-coral, #ef6a4b) 5%, transparent);
+}
+
+.agreeLabelChecked {
+  border-color: var(--color-ocean, #1d3b4a);
+  background-color: color-mix(in srgb, var(--color-ocean, #1d3b4a) 5%, transparent);
+}
+
+.agreeLabelDefault {
+  border-color: color-mix(in srgb, var(--color-driftwood, #81765b) 25%, transparent);
+  background-color: var(--color-cream, #faf6ee);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.checkbox {
+  margin-top: 0.125rem;
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.checkboxChecked {
+  border-color: var(--color-ocean, #1d3b4a);
+  background-color: var(--color-ocean, #1d3b4a);
+}
+
+.checkboxDefault {
+  border-color: color-mix(in srgb, var(--color-driftwood, #81765b) 50%, transparent);
+  background-color: var(--color-cream, #faf6ee);
+}
+
+.checkIcon {
+  height: 1rem; 
+  width: 1rem;
+  color: var(--color-cream, #faf6ee);
+}
+
+.agreeText {
+  font-size: 0.875rem; 
+  line-height: 1.6;
+  color: var(--color-charcoal, #2b2b2b);
+}
+
+.errorMessage {
+  margin-top: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-coral-deep, #c2492c);
+  margin-bottom: 0;
+}
+
+.errorIcon {
+  height: 1rem;
+  width: 1rem;
+}

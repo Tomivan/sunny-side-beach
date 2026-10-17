@@ -1,0 +1,147 @@
+.header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  transition:
+    background-color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.headerTransparent {
+  background-color: transparent;
+  color: var(--color-cream, #faf6ee);
+}
+
+.headerScrolled {
+  background-color: color-mix(in srgb, var(--color-sand, #e8dfc8) 95%, transparent);
+  color: var(--color-ocean, #1d3b4a);
+  box-shadow: 0 1px 0 rgba(129, 118, 91, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ─── Inner container ────────────────────────────────── */
+.inner {
+  margin-inline: auto;
+  display: flex;
+  height: 5rem; /* 80px */
+  max-width: 80rem; /* 1280px */
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding-inline: 2rem;
+  }
+}
+
+.logoLink {
+  border-radius: 1rem;
+}
+
+.logo {
+  width: 68px;
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .nav {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  border-radius: 9999px;
+  padding: 0.5rem 0.875rem;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 150ms ease;
+}
+
+.navLinkTransparent:hover {
+  color: var(--color-gold, #c8a24a);
+}
+
+.navLinkScrolled:hover {
+  color: var(--color-gold-deep, #a17c2e);
+}
+
+.navActive {
+  position: absolute;
+  inset-inline: 0.875rem;
+  bottom: -0.125rem; 
+  height: 3px;
+  border-radius: 9999px;
+  background-color: var(--color-gold, #c8a24a);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.planButton {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .planButton {
+    display: inline-flex;
+  }
+}
+
+.menuButton {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.menuButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menuButton:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 1280px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.menuIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}

@@ -1,0 +1,90 @@
+.section {
+  padding: 6rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.heading {
+  max-width: 42rem;
+  font-family: var(--font-display, inherit);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.02;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3.75rem;
+  }
+}
+
+.lede {
+  margin-top: 1rem;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 80%, transparent);
+}
+
+.allLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  text-decoration: none;
+}
+
+.allLinkIcon {
+  height: 1rem;
+  width: 1rem;
+  transition: transform 200ms ease;
+}
+
+.allLink:hover .allLinkIcon {
+  transform: translateX(0.25rem);
+}
+
+.body {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .body {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.restList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}

@@ -1,0 +1,75 @@
+.scroller {
+  margin-inline: -1.25rem;
+  overflow-x: auto;
+  padding-inline: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  gap: 0.375rem;
+}
+
+.chip {
+  position: relative;
+  height: 2.5rem;
+  white-space: nowrap;
+  border-radius: 9999px;
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.chipIdleLight {
+  color: var(--color-ocean, #1d3b4a);
+}
+
+.chipIdleLight:hover {
+  background-color: color-mix(in srgb, var(--color-ocean, #1d3b4a) 5%, transparent);
+}
+
+.chipIdleDark {
+  color: color-mix(in srgb, var(--color-cream, #faf6ee) 85%, transparent);
+}
+
+.chipIdleDark:hover {
+  background-color: color-mix(in srgb, var(--color-cream, #faf6ee) 10%, transparent);
+}
+
+.chipActiveLight {
+  color: var(--color-cream, #faf6ee);
+}
+
+.chipActiveDark {
+  color: var(--color-ocean, #1d3b4a);
+}
+
+.pill {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+}
+
+.pillLight {
+  background-color: var(--color-ocean, #1d3b4a);
+}
+
+.pillDark {
+  background-color: var(--color-cream, #faf6ee);
+}
+
+.label {
+  position: relative;
+}

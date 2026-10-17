@@ -1,0 +1,36 @@
+.waves {
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 200%;
+  animation-name: wave-drift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.layerReverse {
+  animation-direction: reverse;
+}
+
+.svg {
+  height: 100%;
+  width: 50%;
+  flex-shrink: 0;
+}
+
+@keyframes wave-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

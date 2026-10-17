@@ -1,0 +1,102 @@
+.section {
+  padding: 6rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.heading {
+  font-family: var(--font-display, inherit);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-deep, #a17c2e);
+  margin: 0;
+}
+
+.placeholderNote {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-driftwood, #81765b);
+}
+
+.grid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.figure {
+  margin: 0;
+}
+
+.leadQuote {
+  font-family: var(--font-display, inherit);
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .leadQuote {
+    font-size: 3rem;
+  }
+}
+
+.leadCaption {
+  margin-top: 1.5rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 75%, transparent);
+}
+
+.restList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-driftwood, #81765b) 20%, transparent);
+  padding-top: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .restList {
+    border-top: none;
+    border-left: 1px solid color-mix(in srgb, var(--color-driftwood, #81765b) 20%, transparent);
+    padding-top: 0;
+    padding-left: 3rem;
+  }
+}
+
+.quote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-charcoal, #2b2b2b);
+  margin: 0;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 70%, transparent);
+}
+
+.name {
+  font-weight: 600;
+  color: var(--color-charcoal, #2b2b2b);
+}

@@ -1,49 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ease-out-soft: cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3ede0;
+  color: #252b2a;
+  font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.25 0 0 0 0.1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+:focus-visible {
+  outline: 2px solid #17485a;
+  outline-offset: 3px;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.on-dark :focus-visible {
+  outline-color: #d3b16a;
+}
+/* Waves */
+@keyframes wave-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.wave-drift {
+  animation: wave-drift 20s linear infinite;
+  will-change: transform;
+}
+.wave-reverse {
+  animation-direction: reverse;
+}
+/* Sun */
+@keyframes sun-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes sun-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+.sun-rays {
+  animation: sun-spin 80s linear infinite;
+  transform-box: view-box;
+}
+.sun-core {
+  animation: sun-breathe 6s ease-in-out infinite;
+  transform-origin: 100px 100px;
+  transform-box: view-box;
+}
+/* Scroll indicator */
+@keyframes scroll-dot {
+  0% { transform: translateY(0); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(14px); opacity: 0; }
+}
+.scroll-dot {
+  animation: scroll-dot 1.8s ease-out infinite;
+}
+/* Spinner */
+@keyframes spin-soft {
+  to { transform: rotate(360deg); }
+}
+.spin-soft {
+  animation: spin-soft 0.8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave-drift,
+  .sun-rays,
+  .sun-core,
+  .scroll-dot {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

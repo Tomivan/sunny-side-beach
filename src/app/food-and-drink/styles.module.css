@@ -1,0 +1,224 @@
+.featuredSection {
+  padding: 0 1.25rem 5rem;
+}
+
+@media (min-width: 768px) {
+  .featuredSection {
+    padding: 0 2rem 5rem;
+  }
+}
+
+.featuredGrid {
+  margin-inline: auto;
+  display: grid;
+  max-width: 80rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .featuredGrid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.leadCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.leadImage {
+  aspect-ratio: 4 / 3;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 768px) {
+  .leadImage {
+    aspect-ratio: auto;
+  }
+}
+
+.leadCard:hover .leadImage {
+  transform: scale(1.04);
+}
+
+.leadOverlay {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 1.5rem;
+  background-color: color-mix(in srgb, var(--color-cream, #faf6ee) 95%, transparent);
+  padding: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .leadOverlay {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+.leadHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.leadTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+.leadPrice {
+  font-family: var(--font-display, inherit);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gold-deep, #a17c2e);
+  margin: 0;
+}
+
+.leadDescription {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--color-charcoal, #2b2b2b) 80%, transparent);
+}
+
+.restGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .restGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .restGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.cardImage {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.04);
+}
+
+.cardOverlay {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  background-color: color-mix(in srgb, var(--color-cream, #faf6ee) 95%, transparent);
+  padding: 0.75rem 1rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+.cardPrice {
+  font-family: var(--font-display, inherit);
+  font-weight: 600;
+  color: var(--color-gold-deep, #a17c2e);
+  margin: 0;
+}
+
+.menuSection {
+  background-color: var(--color-cream, #faf6ee);
+  padding: 5rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .menuSection {
+    padding: 7rem 2rem;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.menuHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .menuHeader {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.menuHeading {
+  font-family: var(--font-display, inherit);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--color-ocean, #1d3b4a);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .menuHeading {
+    font-size: 3.75rem;
+  }
+}
+
+.menuHint {
+  font-size: 0.875rem;
+  color: var(--color-driftwood, #81765b);
+  margin: 0;
+}
+
+.menuBody {
+  margin-top: 2.5rem;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
