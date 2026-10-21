@@ -1,7 +1,6 @@
 import { MenuCategory, MenuItem } from '../types/content';
 import { images } from './images';
 
-// Sample menu — replace items and prices with the confirmed Sunny Side menu.
 export const menuCategories: MenuCategory[] = [
 { id: 'small-plates', label: 'Small Plates', group: 'food' },
 { id: 'from-the-sea', label: 'From the Sea', group: 'food' },

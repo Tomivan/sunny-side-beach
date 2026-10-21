@@ -1,10 +1,8 @@
 import { NavLink } from '../types/content';
 
 export const navLinks: NavLink[] = [
-{ label: 'Home', to: '/' },
-{ label: 'The Experience', to: '/experience' },
-{ label: 'Food & Drinks', to: '/food-drinks' },
-{ label: 'Fees', to: '/fees' },
-{ label: 'Gallery', to: '/gallery' },
-{ label: 'Events', to: '/gallery#events' },
-{ label: 'Visit Us', to: '/visit' }];
+{ label: 'Home', href: '/' },
+{ label: 'Food & Drinks', href: '/food-drinks' },
+{ label: 'Fees', href: '/fees' },
+{ label: 'Events', href: '/gallery#events' },
+{ label: 'Visit Us', href: '/visit' }];

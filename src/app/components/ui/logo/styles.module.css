@@ -24,11 +24,11 @@
 
 .image {
   position: absolute;
-  left: -101%;
+  left: 5%;
   top: 0;
-  height: auto;
+  /* height: auto;
   width: 304%;
-  max-width: none;
+  max-width: none; */
   user-select: none;
   -webkit-user-drag: none;
 }

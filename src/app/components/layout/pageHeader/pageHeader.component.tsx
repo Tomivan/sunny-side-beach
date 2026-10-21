@@ -1,6 +1,8 @@
+"use client";
+
 import { motion, useReducedMotion } from 'framer-motion';
-import { Sun } from '../ui/Sun';
-import { easeOut } from '../../utils/motion';
+import { Sun } from '../../ui/Sun/sun.component';
+import { easeOut } from '../../../utils/motion';
 import styles from './styles.module.css';
 
 interface PageHeaderProps {

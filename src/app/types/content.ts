@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export type FeeTierId = 'adult' | 'kid' | 'infant' | 'cabana';
 
 export interface FeeTier {
@@ -38,7 +40,7 @@ export type GalleryCategory =
 
 export interface GalleryItem {
   id: string;
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   category: GalleryCategory;
 }
@@ -92,5 +94,5 @@ export interface Amenity {
 
 export interface NavLink {
   label: string;
-  to: string;
+  href: string;
 }

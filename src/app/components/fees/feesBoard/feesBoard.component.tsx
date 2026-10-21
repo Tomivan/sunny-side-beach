@@ -1,7 +1,7 @@
 import { BanIcon } from 'lucide-react';
-import { PricingRow } from './PricingRow';
-import { Logo } from '../ui/Logo';
-import { feeNotice, feeTiers } from '../../data/fees';
+import { PricingRow } from '../pricingRow/pricingRow.component';
+import { Logo } from '../../ui/logo/logo.component';
+import { feeNotice, feeTiers } from '../../../data/fees';
 import styles from './styles.module.css';
 
 interface FeesBoardProps {

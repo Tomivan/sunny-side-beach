@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { CheckIcon } from 'lucide-react';
-import { easeOut } from '../../utils/motion';
+import { easeOut } from '../../../utils/motion';
 import styles from './styles.module.css';
 
 const STEPS = ['Your visit', 'Review', 'Your details', 'Confirmed'];

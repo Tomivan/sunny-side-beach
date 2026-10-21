@@ -7,8 +7,6 @@ export const eventKinds: EventKind[] = [
 'Special Gathering',
 'Seasonal Promotion'];
 
-
-// Placeholder events — replace with confirmed programming.
 export const events: EventItem[] = [
 {
   id: 'sunset-sessions',

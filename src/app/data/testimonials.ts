@@ -1,6 +1,5 @@
 import { Testimonial } from '../types/content';
 
-// Placeholder reviews — replace with real guest reviews once available.
 export const testimonials: Testimonial[] = [
 {
   id: 't1',

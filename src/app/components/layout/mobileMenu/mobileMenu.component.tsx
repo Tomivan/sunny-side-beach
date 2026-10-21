@@ -1,12 +1,16 @@
-import { Link, useLocation } from 'react-router-dom';
+"use client";
+
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Waves, wavesInto } from '../ui/Waves';
-import { navLinks } from '../../data/navigation';
-import { feeNotice } from '../../data/fees';
-import { isNavLinkActive } from '../../utils/navigation';
-import { easeOut } from '../../utils/motion';
+import { Button } from '../../ui/Button/button.component';
+import { Waves, wavesInto } from '../../ui/Waves/waves.component';
+import { navLinks } from '../../../data/navigation';
+import { feeNotice } from '../../../data/fees';
+import { isNavLinkActive } from '../../../utils/navigation';
+import { easeOut } from '../../../utils/motion';
 import styles from './styles.module.css';
 
 interface MobileMenuProps {
@@ -15,7 +19,16 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
-  const { pathname, hash } = useLocation();
+  const pathname = usePathname();
+  const [hash, setHash] = useState('');
+
+  // Keep hash in sync for active link detection
+  useEffect(() => {
+    const onHash = () => setHash(window.location.hash);
+    onHash();
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, [pathname]);
 
   return (
     <AnimatePresence>
@@ -31,16 +44,18 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           <nav aria-label="Mobile" className={styles.nav}>
             <ul className={styles.list}>
               {navLinks.map((link, i) => {
-                const active = isNavLinkActive(link.to, pathname, hash);
+                const href = link.href;
+                const active = isNavLinkActive(href, pathname, hash);
+                
                 return (
                   <motion.li
-                    key={link.to}
+                    key={href}
                     initial={{ opacity: 0, x: -14 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 + i * 0.04, duration: 0.24, ease: easeOut }}
                   >
                     <Link
-                      to={link.to}
+                      href={href}
                       onClick={onClose}
                       aria-current={active ? 'page' : undefined}
                       className={[styles.link, active ? styles.linkActive : ''].join(' ')}
@@ -61,7 +76,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.24, ease: easeOut }}
             >
-              <Button to="/plan" size="lg" className={styles.planButton}>
+              <Button href="/plan" size="lg" className={styles.planButton}>
                 Plan Your Visit
               </Button>
               <p className={styles.feeNotice}>{feeNotice}</p>

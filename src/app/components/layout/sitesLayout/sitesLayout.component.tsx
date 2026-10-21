@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { Header } from './Header';
-import { Footer } from './Footer';
-import { ScrollManager } from './ScrollManager';
+import { Header } from '../header/header.component';
+import { Footer } from '../footer/footer.component';
+import { ScrollManager } from '../scrollManager/scrollManager.component';
 import styles from './styles.module.css';
 
 export function SiteLayout() {

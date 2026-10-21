@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { GuestDetails, GuestErrors, SubmitStatus, VisitDetails, VisitErrors } from '../types/booking';
 import { validateGuest, validateVisit } from '../utils/validation';

@@ -1,5 +1,5 @@
 import { CalendarIcon, ClockIcon } from 'lucide-react';
-import { EventItem } from '../../types/content';
+import { EventItem } from '../../../types/content';
 import styles from './styles.module.css';
 
 interface EventCardProps {

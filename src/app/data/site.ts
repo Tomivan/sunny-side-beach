@@ -1,4 +1,3 @@
-// Venue details are placeholders until Sunny Side confirms them.
 export const siteConfig = {
   name: 'Sunny Side Beach',
   tagline: 'Your Happy Place by the Sea.',
