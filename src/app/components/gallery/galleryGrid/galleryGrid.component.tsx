@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ExpandIcon } from 'lucide-react';
 import { GalleryItem } from '../../../types/content';
 import { easeOut } from '../../../utils/motion';
+import Image from 'next/image';
 import styles from './styles.module.css';
 
 interface GalleryGridProps {
@@ -29,7 +30,7 @@ export function GalleryGrid({ items, onOpen }: GalleryGridProps) {
               className={styles.button}
               aria-label={`Open image: ${item.alt}`}
             >
-              <img
+              <Image
                 src={item.src}
                 alt={item.alt}
                 loading="lazy"

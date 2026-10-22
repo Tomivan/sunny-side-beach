@@ -80,7 +80,7 @@ export function Lightbox({ items, index, onClose, onChange }: LightboxProps) {
             <AnimatePresence mode="popLayout" initial={false}>
               <motion.img
                 key={item.id}
-                src={item.src}
+                src={typeof item.src === 'string' ? item.src : item.src.src} 
                 alt={item.alt}
                 draggable={false}
                 initial={{ opacity: 0, x: direction * 48, scale: 0.98 }}

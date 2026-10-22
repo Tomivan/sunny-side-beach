@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import { addDays, format, isSaturday, nextSaturday } from 'date-fns';
 import { CalendarDaysIcon } from 'lucide-react';
 import { GuestCounter } from '../guestCounter/guestCounter.component';
@@ -21,13 +24,22 @@ function toISO(date: Date) {
 }
 
 export function VisitStep({ visit, errors, onChange }: VisitStepProps) {
-  const today = new Date();
-  const saturday = isSaturday(today) ? today : nextSaturday(today);
-  const quickDates = [
-    { label: 'Today', value: toISO(today) },
-    { label: 'Tomorrow', value: toISO(addDays(today, 1)) },
-    { label: 'This Saturday', value: toISO(saturday) },
-  ].filter((d, i, arr) => arr.findIndex((x) => x.value === d.value) === i);
+  // 1. Initialize state for dynamic dates
+  const [todayISO, setTodayISO] = useState('');
+  const [quickDates, setQuickDates] = useState<{ label: string; value: string }[]>([]);
+
+  // 2. Calculate dates only on the client side
+  useEffect(() => {
+    const today = new Date();
+    const saturday = isSaturday(today) ? today : nextSaturday(today);
+    
+    setTodayISO(toISO(today));
+    setQuickDates([
+      { label: 'Today', value: toISO(today) },
+      { label: 'Tomorrow', value: toISO(addDays(today, 1)) },
+      { label: 'This Saturday', value: toISO(saturday) },
+    ].filter((d, i, arr) => arr.findIndex((x) => x.value === d.value) === i));
+  }, []);
 
   const adult = getFeeTier('adult');
   const kid = getFeeTier('kid');
@@ -61,7 +73,7 @@ export function VisitStep({ visit, errors, onChange }: VisitStepProps) {
               <input
                 id="field-date"
                 type="date"
-                min={toISO(today)}
+                min={todayISO} // 3. Use the state variable for the min attribute
                 value={visit.date}
                 onChange={(e) => onChange('date', e.target.value)}
                 aria-invalid={!!errors.date}

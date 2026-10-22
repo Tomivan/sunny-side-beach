@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeftIcon, ArrowRightIcon, Loader2Icon } from 'lucide-react';
 import { StepIndicator } from '../components/booking/stepIndicator/stepIndicator.component';

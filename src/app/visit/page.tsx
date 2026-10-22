@@ -1,3 +1,5 @@
+"use client";
+
 import { AccessibilityIcon, AtSignIcon, BanIcon, ClockIcon, MailIcon, MapPinIcon, MessageCircleIcon, Music2Icon, PhoneIcon, TicketIcon } from 'lucide-react';
 import { PageHeader } from '../components/layout/pageHeader/pageHeader.component';
 import { FaqAccordion } from '../components/ui/faqAccordion/faqAccordion.component';

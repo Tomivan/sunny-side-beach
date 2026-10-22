@@ -20,10 +20,10 @@ export function FinalCta() {
           </p>
         </Reveal>
         <Reveal delay={0.12} className={styles.actions}>
-          <Button to="/plan" size="lg">
+          <Button href="/plan" size="lg">
             Plan Your Visit
           </Button>
-          <Button to="/fees" size="lg" variant="light">
+          <Button href="/fees" size="lg" variant="light">
             See fees &amp; entry
           </Button>
         </Reveal>
