@@ -58,7 +58,7 @@ export interface EventItem {
   dateLabel: string;
   timeLabel: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   isPlaceholder: boolean;
 }
 

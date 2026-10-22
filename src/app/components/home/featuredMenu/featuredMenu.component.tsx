@@ -27,6 +27,8 @@ export function FeaturedMenu() {
               alt="Signature cocktails at sunset"
               loading="lazy"
               className={styles.secondaryImage}
+              width={300}
+              height={250}
             />
           </div>
         </Reveal>

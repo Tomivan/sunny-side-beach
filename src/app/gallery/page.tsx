@@ -30,38 +30,10 @@ export default function GalleryEvents() {
     <>
       <Header />
       <PageHeader
-        label="Gallery & Events"
+        label="Events"
         title="Life at Sunny Side"
         intro="A look at the beach, the food, the drinks and the people — plus what’s coming up to enjoy during your visit."
       />
-
-      <section className={styles.gallerySection} aria-labelledby="gallery-heading">
-        <div className={styles.container}>
-          <h2 id="gallery-heading" className={styles.srOnly}>Gallery</h2>
-          <FilterChips
-            options={['All', ...galleryCategories] as GalleryFilter[]}
-            value={category}
-            onChange={(c) => {
-              setCategory(c);
-              setLightboxIndex(null);
-            }}
-            layoutId="gallery-chip"
-            label="Filter gallery"
-          />
-
-          <div className={styles.galleryBody}>
-            {photos.length === 0 ? (
-              <div className={styles.emptyGallery}>
-                <ImageOffIcon className={styles.emptyIcon} aria-hidden="true" />
-                <p className={styles.emptyTitle}>No photos here yet</p>
-                <p className={styles.emptyText}>We’re adding more moments soon.</p>
-              </div>
-            ) : (
-              <GalleryGrid items={photos} onOpen={setLightboxIndex} />
-            )}
-          </div>
-        </div>
-      </section>
 
       <Lightbox
         items={photos}
@@ -76,7 +48,7 @@ export default function GalleryEvents() {
         aria-labelledby="events-page-heading"
       >
         <div className={styles.container}>
-          <div className={styles.eventsHeader}>
+          {/* <div className={styles.eventsHeader}>
             <Reveal>
               <h2 id="events-page-heading" className={styles.eventsHeading}>
                 Upcoming at Sunny Side
@@ -87,8 +59,8 @@ export default function GalleryEvents() {
                 Events are part of your day here, not a separate booking. Plan your visit as usual and enjoy what’s on.
               </p>
             </Reveal>
-          </div>
-          <div className={styles.filterRow}>
+          </div> */}
+          {/* <div className={styles.filterRow}>
             <FilterChips
               options={['All events', ...eventKinds] as EventFilter[]}
               value={kind}
@@ -96,7 +68,7 @@ export default function GalleryEvents() {
               layoutId="event-chip"
               label="Filter events"
             />
-          </div>
+          </div> */}
           {visibleEvents.length === 0 ? (
             <div className={styles.emptyEvents}>
               <CalendarXIcon className={styles.emptyIcon} aria-hidden="true" />

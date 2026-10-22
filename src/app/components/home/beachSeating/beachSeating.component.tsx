@@ -2,7 +2,6 @@ import { Button } from '../../ui/Button/button.component';
 import { Reveal } from '../../ui/Reveal/reveal.component';
 import Image from 'next/image';
 import Cabanas from '../../../../../public/assets/images/cabanas.jpeg';
-import Loungers from '../../../../../public/assets/images/loungers.jpeg';
 import { seatingOptions } from '../../../data/experiences';
 import { feeTiers } from '../../../data/fees';
 import { formatNaira } from '../../../utils/currency';
@@ -57,14 +56,6 @@ export function BeachSeating() {
               alt="Cream canvas cabanas facing the sea"
               loading="lazy"
               className={styles.image}
-            />
-          </div>
-          <div className={styles.secondaryImageFrame}>
-            <Image
-              src={Loungers}
-              alt="Loungers and parasols on the sand"
-              loading="lazy"
-              className={styles.secondaryImage}
             />
           </div>
         </Reveal>

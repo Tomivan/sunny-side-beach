@@ -38,8 +38,10 @@ export default function VisitUs({ simulateSubmissionError = false }: { simulateS
             <div className={styles.mapPanel}>
               <MapPinIcon className={styles.mapIcon} aria-hidden="true" />
               <h2 className={styles.mapHeading}>{siteConfig.address}</h2>
-              <p className={styles.mapNote}>{siteConfig.addressNote}</p>
-              <p className={styles.mapLabel}>Map placeholder</p>
+              {/* <p className={styles.mapNote}>{siteConfig.addressNote}</p> */}
+              <a href="https://l.instagram.com/?u=https%3A%2F%2Fmaps.app.goo.gl%2FGxzabbmdyBoupkyN7%3Fg_st%3Dipc%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacjvgyttqgZjYI9ugcJGyT3V99-2aBRmQybq05DmlVpb58FCl41iLDbUMOU0w_aem_g27XkeCWpLHW8QY1uBQuSg&e=AUDF7c6rCj8WTwjwJAbLb9daOtb4bwxutkydpltmJ2WN2K_P3Og-Yy71ILNMGHPmvBais3oQcCwuzKTu3rf_EEyv161mLnfLtwJdfJJ7MFEUZ1X4iiN9aAj9EvOEriytmiLgUS4" className={styles.mapLabel} target="_blank" rel="noopener noreferrer">
+                View on Google Maps
+              </a>
             </div>
           </Reveal>
 
@@ -78,7 +80,7 @@ export default function VisitUs({ simulateSubmissionError = false }: { simulateS
                   const Icon = socialIcons[s.label] ?? AtSignIcon;
                   return (
                     <li key={s.label}>
-                      <a href={s.href} className={styles.socialChip}>
+                      <a href={s.href} className={styles.socialChip} target="_blank" rel="noopener noreferrer">
                         <Icon className={styles.socialIcon} aria-hidden="true" />
                         {s.label}
                       </a>

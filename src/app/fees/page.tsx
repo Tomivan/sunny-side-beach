@@ -87,15 +87,6 @@ export default function Fees() {
 
       <section className={styles.faqSection} aria-labelledby="fees-faq">
         <div className={styles.faqGrid}>
-          <Reveal>
-            <h2 id="fees-faq" className={styles.faqHeading}>
-              Fee questions
-            </h2>
-            <figure className={styles.poster}>
-              <img src={images.poster} alt="Original Sunny Side fees poster" loading="lazy" className={styles.posterImage} />
-              <figcaption className={styles.srOnly}>The original Sunny Side fees poster</figcaption>
-            </figure>
-          </Reveal>
           <Reveal delay={0.06}>
             <FaqAccordion items={faqs.filter((f) => f.topic === 'fees')} />
           </Reveal>

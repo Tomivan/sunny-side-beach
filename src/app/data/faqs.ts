@@ -2,12 +2,6 @@ import { Faq } from '../types/content';
 
 export const faqs: Faq[] = [
 {
-  id: 'one-fee',
-  topic: 'fees',
-  question: 'Do I pay a separate fee for the restaurant, bar and beach club?',
-  answer: 'No. Sunny Side is one destination. Your gate fee covers entry for the whole visit, so you can move freely between the restaurant, bar and beach club.'
-},
-{
   id: 'min-spend',
   topic: 'fees',
   question: 'Is the minimum spend an extra charge?',
